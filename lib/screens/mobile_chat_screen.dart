@@ -11,9 +11,7 @@ class MobileChatScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: appBarColor,
-        title: Text(
-          info[0]['name'].toString(),
-        ),
+        title: Text(info[0]['name'].toString()),
         centerTitle: false,
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.video_call)),
@@ -31,15 +29,16 @@ class MobileChatScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
             decoration: BoxDecoration(
               color: chatBarMessage,
-              border: const Border(
-                top: BorderSide(color: dividerColor),
-              ),
+              border: const Border(top: BorderSide(color: dividerColor)),
             ),
             child: Row(
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: const Icon(Icons.emoji_emotions_outlined, color: Colors.grey),
+                  icon: const Icon(
+                    Icons.emoji_emotions_outlined,
+                    color: Colors.grey,
+                  ),
                 ),
                 IconButton(
                   onPressed: () {},

@@ -17,13 +17,11 @@ class WebScreenLayout extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-               
               child: Column(
                 children: [
                   WebProfileBar(),
                   WebSearchBar(),
-                  Expanded(
-                    child: ContactList()),
+                  Expanded(child: ContactList()),
                 ],
               ), // Removed unnecessary Column & ScrollView
             ),
@@ -33,35 +31,32 @@ class WebScreenLayout extends StatelessWidget {
             child: Column(
               children: [
                 WebChatAppbar(),
-                Expanded(
-                  child: ChatList(),
-                ),
+                Expanded(child: ChatList()),
                 Container(
-                  height: MediaQuery.of(context).size.height*0.07,
+                  height: MediaQuery.of(context).size.height * 0.07,
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(color:dividerColor)
-                    ),
+                    border: Border(bottom: BorderSide(color: dividerColor)),
                     color: chatBarMessage,
                   ),
                   child: Row(
                     children: [
-                      IconButton(onPressed: (){}, icon: Icon(
-                        Icons.emoji_emotions_outlined,
-                        color:Colors.grey
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.emoji_emotions_outlined,
+                          color: Colors.grey,
+                        ),
                       ),
-                      ),
-                      IconButton(onPressed: (){}, icon: Icon(
-                        Icons.attach_file,
-                        color:Colors.grey
-                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.attach_file, color: Colors.grey),
                       ),
                       Expanded(
-                        child:Padding(
-                          padding: EdgeInsets.only(left: 10,right:15),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 10, right: 15),
                           child: TextField(
-                            decoration:InputDecoration(
+                            decoration: InputDecoration(
                               filled: true,
                               fillColor: searchBarColor,
                               hintText: 'Type a message',
@@ -69,25 +64,22 @@ class WebScreenLayout extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20.0),
                                 borderSide: BorderSide(
                                   width: 0,
-                                  style: BorderStyle.none
-                                )
-                              )
-                            )
+                                  style: BorderStyle.none,
+                                ),
+                              ),
+                            ),
                           ),
-                        ), 
-                      )
+                        ),
+                      ),
                     ],
                   ),
-
-
-                )
-
+                ),
               ],
             ),
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/backgroundImage.png'),
-                fit: BoxFit.cover, 
+                fit: BoxFit.cover,
               ),
             ),
           ),
